@@ -201,7 +201,7 @@ export default function Home() {
             title="Notre cavalerie"
             subtitle="Du shetland au cheval, en passant par des poneys B, C et D: une cavalerie variée et adaptée à tous les âges et à tous les niveaux. Ici, chacun trouve sa monture pour progresser en confiance"
           />
-          <div className="grid sm:grid-cols-2 lg:grid-cols-3 gap-6 mt-8">
+          <div className="grid sm:grid-cols-2 lg:grid-cols-3 gap-6 mt-8 items-end">
             {cavalerieCards.map((card, i) => (
               <AnimatedSection key={card.title} delay={i * 0.1}>
                 <div className="bg-white rounded-xl overflow-hidden shadow-md hover:shadow-xl transition-shadow border border-gray-50 group">
@@ -226,7 +226,7 @@ export default function Home() {
           <div className="text-center mt-10">
             <Link
               href="/cavalerie"
-              className="inline-flex items-center gap-2 text-primary font-semibold hover:text-accent transition-colors"
+              className="inline-flex items-center gap-2 px-8 py-3 bg-primary text-white font-semibold rounded-full hover:bg-primary/90 transition-colors shadow-md"
             >
               Découvrir notre cavalerie <ArrowRight className="w-4 h-4" />
             </Link>
