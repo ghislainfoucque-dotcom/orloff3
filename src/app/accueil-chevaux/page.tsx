@@ -63,21 +63,21 @@ export default function AccueilChevaux() {
         />
 
         <PricingTable
-          title="Box seul"
-          headers={["Type d'équidé", "Tarif mensuel"]}
-          rows={[
-            { label: "Chevaux", price: "375€/mois" },
-            { label: "Poneys D", price: "305€/mois" },
-          ]}
-        />
-
-        <PricingTable
           title="Paddock + Box"
           headers={["Type d'équidé", "Tarif mensuel"]}
           rows={[
             { label: "Chevaux", price: "425€/mois" },
             { label: "Poneys C & D", price: "345€/mois" },
             { label: "Poneys B", price: "235€/mois" },
+          ]}
+        />
+
+        <PricingTable
+          title="Box/Paddock (Box ouvert sur Paddock)"
+          headers={["Type d'équidé", "Tarif mensuel"]}
+          rows={[
+            { label: "Chevaux", price: "375€/mois" },
+            { label: "Poneys D", price: "305€/mois" },
           ]}
           note="Règlements la première quinzaine du mois. Journée d'absence programmée au-delà de 6 jours facturée 10€."
         />

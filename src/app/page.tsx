@@ -241,7 +241,7 @@ export default function Home() {
           <div className="grid sm:grid-cols-2 lg:grid-cols-3 gap-6 mt-8">
             {activities.map((act, i) => (
               <AnimatedSection key={act.title} delay={i * 0.08}>
-                <div className="bg-white rounded-xl p-6 shadow-md hover:shadow-xl hover:-translate-y-1 transition-all border border-gray-50 group cursor-pointer">
+                <div className="bg-white rounded-xl p-6 shadow-md hover:shadow-xl hover:-translate-y-1 transition-all border border-gray-50 group cursor-pointer h-full">
                   <div className="w-12 h-12 rounded-lg bg-accent/10 flex items-center justify-center mb-4 group-hover:bg-accent/20 transition-colors">
                     <act.icon className="w-6 h-6 text-accent" />
                   </div>
