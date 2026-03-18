@@ -69,10 +69,10 @@ export default function Tarifs() {
               headers={["Formule", "Adhérent", "Propriétaire"]}
               rows={[
                 { label: "Carte 4 cours (valable 2 mois)", adherent: "88€", proprietaire: "56€" },
-                { label: "Abonnement 9 cours (valable 3 mois)", adherent: "189€", proprietaire: "117€" },
+                { label: "Abonnement 9 cours* (valable 3 mois)", adherent: "189€", proprietaire: "117€" },
                 { label: "Cours à l'unité", adherent: "29€", proprietaire: "23€" },
               ]}
-              note="Soit l'heure de base à 21€ (adhérent) / 13€ (propriétaire)"
+              note="* Soit l'heure de base à 21€ (adhérent) / 13€ (propriétaire)"
             />
           </div>
         </AnimatedSection>
@@ -83,28 +83,28 @@ export default function Tarifs() {
             <h2 className="font-display text-2xl md:text-3xl font-bold text-anthracite mb-2">
               Enfants (6-12 ans)
             </h2>
-            <p className="text-anthracite/60 mb-6">
-              Cotisation : <strong>165€</strong> | Licence : <strong>30€</strong>
+            <p className="text-anthracite/60 mb-1">
+              Cotisation : <strong>165€</strong> — si règlement avant le 1er juillet 2025 : <strong>145€</strong>
             </p>
-
-            <PricingTable
-              title="Cours collectifs 40 min"
-              headers={["Formule", "Adhérent", "Propriétaire"]}
-              rows={[
-                { label: "Carte 4 cours (2 mois)", adherent: "88€", proprietaire: "56€" },
-                { label: "Abonnement 2 mois (9 cours)", adherent: "189€", proprietaire: "117€" },
-                { label: "Cours à l'unité", adherent: "29€", proprietaire: "23€" },
-              ]}
-            />
+            <p className="text-anthracite/60 mb-6">
+              Licence : <strong>26€</strong>
+            </p>
 
             <PricingTable
               title="Cours collectifs 1h"
               headers={["Formule", "Adhérent", "Propriétaire"]}
               rows={[
-                { label: "Abonnement annuel (par cours)", adherent: "25€", proprietaire: "15,50€" },
-                { label: "Carte 10 cours (3 mois)", adherent: "275€", proprietaire: "175€" },
+                { label: "Abonnement annuel", adherent: "25€/cours**", proprietaire: "15,5€/cours**" },
+                { label: "Carte 10 cours (Valable 3 mois)", adherent: "275€", proprietaire: "175€" },
                 { label: "Cours à l'unité", adherent: "31€", proprietaire: "25€" },
               ]}
+              note="** nombre de cours à valider à l'inscription"
+            />
+
+            <PricingTable
+              title="Cours particuliers"
+              headers={["Formule", "Adhérent", "Propriétaire"]}
+              rows={[{ label: "Cours particulier 30 min", adherent: "32€", proprietaire: "32€" }]}
             />
           </div>
         </AnimatedSection>
@@ -116,25 +116,30 @@ export default function Tarifs() {
               Ados & Adultes (13 ans+)
             </h2>
             <p className="text-anthracite/60 mb-6">
-              Cotisation : <strong>180€</strong> (étudiant : <strong>110€</strong> sur justificatif)
+              Cotisation : <strong>180€</strong> — si règlement avant le 1er juillet 2025 : <strong>160€</strong>
               <br />
-              Licence -18 ans : <strong>30€</strong> | +18 ans : <strong>42€</strong>
+              Cotisation étudiante (carte étudiante obligatoire) : <strong>110€</strong>
+              <br />
+              Licence Mineurs : <strong>26€</strong> | Majeurs : <strong>38€</strong>
             </p>
 
             <PricingTable
               title="Cours collectifs 1h"
               headers={["Formule", "Adhérent", "Propriétaire"]}
               rows={[
-                { label: "Abonnement annuel (par cours)", adherent: "26€", proprietaire: "17€" },
-                { label: "Carte 10 cours (3 mois)", adherent: "280€", proprietaire: "180€" },
-                { label: "Carte 10 cours étudiant", adherent: "155€", proprietaire: "125€" },
+                { label: "Abonnement annuel", adherent: "26€/cours**", proprietaire: "17€/cours**" },
+                { label: "Carte 10 cours (Valable 3 mois)", adherent: "280€", proprietaire: "180€" },
+                { label: "Cours à l'unité", adherent: "32€", proprietaire: "26€" },
+                { label: "Carte 10 cours étudiant (Valable 3 mois)", adherent: "155€", proprietaire: "125€" },
+                { label: "Cours étudiant à l'unité", adherent: "21€", proprietaire: "18€" },
               ]}
+              note="** nombre de cours à valider à l'inscription"
             />
 
             <PricingTable
               title="Cours particuliers"
-              headers={["Formule", "Tarif"]}
-              rows={[{ label: "Cours particulier 30 min", price: "32€" }]}
+              headers={["Formule", "Adhérent", "Propriétaire"]}
+              rows={[{ label: "Cours particulier 30 min", adherent: "32€", proprietaire: "32€" }]}
             />
           </div>
         </AnimatedSection>
@@ -183,8 +188,9 @@ export default function Tarifs() {
                 { label: "Animation (selon programme)", adherent: "à partir de 20€", proprietaire: "—" },
                 { label: "Passage de galop", adherent: "25€", proprietaire: "—" },
                 { label: "Concours club", adherent: "40€", proprietaire: "28€" },
+                { label: "Équifun", adherent: "20€", proprietaire: "—" },
                 { label: "Concours extérieur", adherent: "115€", proprietaire: "105€" },
-                { label: "Groupe / scolaire", adherent: "sur devis", proprietaire: "—" },
+                { label: "Groupe / scolaire", sublabel: "En fonction du nombre d'enfants, de l'âge et de la durée", adherent: "sur devis", proprietaire: "—" },
                 { label: "Anniversaire (min. 10 enfants)", adherent: "17€/enfant", proprietaire: "—" },
               ]}
             />

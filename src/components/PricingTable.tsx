@@ -4,6 +4,7 @@ import AnimatedSection from "./AnimatedSection";
 
 interface Row {
   label: string;
+  sublabel?: string;
   adherent?: string;
   proprietaire?: string;
   price?: string;
@@ -55,7 +56,12 @@ export default function PricingTable({ title, headers, rows, note }: Props) {
                   i % 2 === 0 ? "bg-white" : "bg-cream"
                 }`}
               >
-                <td className="px-4 py-3 text-anthracite">{row.label}</td>
+                <td className="px-4 py-3 text-anthracite">
+                  {row.label}
+                  {row.sublabel && (
+                    <span className="block text-xs italic text-anthracite/50">{row.sublabel}</span>
+                  )}
+                </td>
                 {hasTwo ? (
                   <>
                     <td className="px-4 py-3 text-right font-semibold text-primary">
