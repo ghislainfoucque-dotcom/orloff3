@@ -35,6 +35,7 @@ const activites = [
     icon: Trophy,
     title: "Concours : CSO, Dressage et Equifun",
     image: "/insta-03.png",
+    imagePosition: "object-top",
     tarifLink: "/contact/tarifs#animations",
     tarifLabel: "Voir les tarifs concours",
   },
@@ -204,7 +205,7 @@ export default function Activites() {
                   src={act.image}
                   alt={act.title}
                   fill
-                  className="object-cover"
+                  className={`object-cover ${act.imagePosition ?? ""}`}
                 />
               </div>
             </AnimatedSection>
