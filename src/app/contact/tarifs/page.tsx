@@ -38,6 +38,7 @@ export default function Tarifs() {
             { label: "Ados & Adultes", id: "adultes" },
             { label: "Stages vacances", id: "stages" },
             { label: "Animations", id: "animations" },
+            { label: "Propriétaires", id: "proprietaires" },
           ].map((cat) => (
             <button
               key={cat.id}
@@ -58,10 +59,10 @@ export default function Tarifs() {
               Baby (4-5 ans)
             </h2>
             <p className="text-anthracite/60 mb-1">
-              Cotisation : <strong>155€</strong> — si règlement avant le 1er juillet 2025 : <strong>135€</strong>
+              Cotisation : <strong>155€</strong> — si règlement avant le 1er juillet 2026 : <strong>135€</strong>
             </p>
             <p className="text-anthracite/60 mb-6">
-              Licence : <strong>26€</strong>
+              Licence : <strong>30€</strong>
             </p>
 
             <PricingTable
@@ -84,10 +85,10 @@ export default function Tarifs() {
               Enfants (6-12 ans)
             </h2>
             <p className="text-anthracite/60 mb-1">
-              Cotisation : <strong>165€</strong> — si règlement avant le 1er juillet 2025 : <strong>145€</strong>
+              Cotisation : <strong>165€</strong> — si règlement avant le 1er juillet 2026 : <strong>145€</strong>
             </p>
             <p className="text-anthracite/60 mb-6">
-              Licence : <strong>26€</strong>
+              Licence : <strong>30€</strong>
             </p>
 
             <PricingTable
@@ -104,7 +105,10 @@ export default function Tarifs() {
             <PricingTable
               title="Cours particuliers"
               headers={["Formule", "Adhérent", "Propriétaire"]}
-              rows={[{ label: "Cours particulier 30 min", adherent: "32€", proprietaire: "32€" }]}
+              rows={[
+                { label: "Cours particulier 30 min", adherent: "40€", proprietaire: "35€" },
+                { label: "Carte 10 cours particuliers (+1 gratuit)", adherent: "400€", proprietaire: "350€" },
+              ]}
             />
           </div>
         </AnimatedSection>
@@ -116,11 +120,11 @@ export default function Tarifs() {
               Ados & Adultes (13 ans+)
             </h2>
             <p className="text-anthracite/60 mb-6">
-              Cotisation : <strong>180€</strong> — si règlement avant le 1er juillet 2025 : <strong>160€</strong>
+              Cotisation : <strong>180€</strong> — si règlement avant le 1er juillet 2026 : <strong>160€</strong>
               <br />
               Cotisation étudiante (carte étudiante obligatoire) : <strong>110€</strong>
               <br />
-              Licence Mineurs : <strong>26€</strong> | Majeurs : <strong>38€</strong>
+              Licence Mineurs (nés en 2009 et après) : <strong>30€</strong> | Majeurs (nés en 2008 et avant) : <strong>42€</strong>
             </p>
 
             <PricingTable
@@ -139,7 +143,10 @@ export default function Tarifs() {
             <PricingTable
               title="Cours particuliers"
               headers={["Formule", "Adhérent", "Propriétaire"]}
-              rows={[{ label: "Cours particulier 30 min", adherent: "32€", proprietaire: "32€" }]}
+              rows={[
+                { label: "Cours particulier 30 min", adherent: "40€", proprietaire: "35€" },
+                { label: "Carte 10 cours particuliers (+1 gratuit)", adherent: "400€", proprietaire: "350€" },
+              ]}
             />
           </div>
         </AnimatedSection>
@@ -188,11 +195,59 @@ export default function Tarifs() {
                 { label: "Animation (selon programme)", adherent: "à partir de 20€", proprietaire: "—" },
                 { label: "Passage de galop", adherent: "25€", proprietaire: "—" },
                 { label: "Concours club", adherent: "40€", proprietaire: "28€" },
-                { label: "Équifun", adherent: "20€", proprietaire: "—" },
-                { label: "Concours extérieur", adherent: "115€", proprietaire: "105€" },
+                { label: "Équifun", adherent: "25€", proprietaire: "—" },
+                { label: "Concours extérieur", adherent: "125€", proprietaire: "110€" },
                 { label: "Groupe / scolaire", sublabel: "En fonction du nombre d'enfants, de l'âge et de la durée", adherent: "sur devis", proprietaire: "—" },
-                { label: "Anniversaire (min. 10 enfants)", adherent: "17€/enfant", proprietaire: "—" },
+                { label: "Anniversaire (min. 10 enfants)", adherent: "20€/enfant", proprietaire: "—" },
               ]}
+            />
+          </div>
+        </AnimatedSection>
+
+        {/* ── PRESTATIONS PROPRIÉTAIRES ── */}
+        <AnimatedSection>
+          <div id="proprietaires" className="bg-white rounded-2xl shadow-lg p-8 mb-6 mt-10 scroll-mt-24">
+            <h2 className="font-display text-2xl md:text-3xl font-bold text-anthracite mb-2">
+              Prestations propriétaires
+            </h2>
+            <p className="text-anthracite/60 mb-6">
+              Tarifs mensuels — <strong>licence et cotisation obligatoires</strong>.
+            </p>
+
+            <PricingTable
+              title="Prestation Paddock"
+              headers={["Type d'équidé", "Tarif mensuel"]}
+              rows={[
+                { label: "Cheval", price: "350€/mois" },
+                { label: "Poney", price: "280€/mois" },
+                { label: "Shetland", price: "130€/mois" },
+              ]}
+            />
+
+            <PricingTable
+              title="Prestation Paddock/Box (Box ouvert sur Paddock)"
+              headers={["Type d'équidé", "Tarif mensuel"]}
+              rows={[{ label: "Poney", price: "320€/mois" }]}
+            />
+
+            <PricingTable
+              title="Prestation Box + Paddock"
+              headers={["Type d'équidé", "Tarif mensuel"]}
+              rows={[
+                { label: "Cheval", price: "450€/mois" },
+                { label: "Poney", price: "365€/mois" },
+              ]}
+            />
+
+            <PricingTable
+              title="Prestation Paddock + Box (hiver)"
+              headers={["Type d'équidé", "Mois sans box", "Mois d'hiver"]}
+              rows={[
+                { label: "Shetland", adherent: "130€/mois", proprietaire: "200€/mois" },
+                { label: "Poney", adherent: "280€/mois", proprietaire: "380€/mois" },
+                { label: "Cheval", adherent: "350€/mois", proprietaire: "475€/mois" },
+              ]}
+              note="Forfait couverture : 20€. En cas d'absence, les 6 premiers jours de la prestation sont dus ; au-delà, demi-tarif calculé au prorata du nombre de jours."
             />
           </div>
         </AnimatedSection>

@@ -50,36 +50,41 @@ export default function AccueilChevaux() {
           </div>
         </AnimatedSection>
 
-        {/* Tarifs */}
+        {/* Tarifs — Licence et cotisation obligatoires */}
         <PricingTable
-          title="Paddock seul"
+          title="Prestation Paddock"
           headers={["Type d'équidé", "Tarif mensuel"]}
           rows={[
-            { label: "Chevaux", price: "325€/mois" },
-            { label: "Poneys C & D", price: "265€/mois" },
-            { label: "Poneys B", price: "170€/mois" },
-            { label: "Shetlands", price: "120€/mois" },
+            { label: "Cheval", price: "350€/mois" },
+            { label: "Poney", price: "280€/mois" },
+            { label: "Shetland", price: "130€/mois" },
           ]}
         />
 
         <PricingTable
-          title="Paddock + Box"
+          title="Prestation Paddock/Box (Box ouvert sur Paddock)"
+          headers={["Type d'équidé", "Tarif mensuel"]}
+          rows={[{ label: "Poney", price: "320€/mois" }]}
+        />
+
+        <PricingTable
+          title="Prestation Box + Paddock"
           headers={["Type d'équidé", "Tarif mensuel"]}
           rows={[
-            { label: "Chevaux", price: "425€/mois" },
-            { label: "Poneys C & D", price: "345€/mois" },
-            { label: "Poneys B", price: "235€/mois" },
+            { label: "Cheval", price: "450€/mois" },
+            { label: "Poney", price: "365€/mois" },
           ]}
         />
 
         <PricingTable
-          title="Box/Paddock (Box ouvert sur Paddock)"
-          headers={["Type d'équidé", "Tarif mensuel"]}
+          title="Prestation Paddock + Box (hiver)"
+          headers={["Type d'équidé", "Mois sans box", "Mois d'hiver"]}
           rows={[
-            { label: "Chevaux", price: "375€/mois" },
-            { label: "Poneys D", price: "305€/mois" },
+            { label: "Shetland", adherent: "130€/mois", proprietaire: "200€/mois" },
+            { label: "Poney", adherent: "280€/mois", proprietaire: "380€/mois" },
+            { label: "Cheval", adherent: "350€/mois", proprietaire: "475€/mois" },
           ]}
-          note="Règlements la première quinzaine du mois. Journée d'absence programmée au-delà de 6 jours facturée 10€."
+          note="Forfait couverture : 20€. Licence et cotisation obligatoires. En cas d'absence, les 6 premiers jours de la prestation sont dus ; au-delà, demi-tarif calculé au prorata du nombre de jours."
         />
 
         {/* CTA */}
