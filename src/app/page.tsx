@@ -264,6 +264,26 @@ export default function Home() {
         </div>
       </section>
 
+      {/* ═══ PROJET PÉDAGOGIQUE ═══ */}
+      <section className="py-20 lg:py-28">
+        <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+          <SectionTitle
+            title="Notre projet pédagogique"
+            subtitle="Une progression par âge, niveau et envie"
+          />
+          <div className="text-center mt-10">
+            <a
+              href="/projet-pedagogique.pdf"
+              target="_blank"
+              rel="noopener noreferrer"
+              className="inline-flex items-center gap-2 px-8 py-3 bg-primary text-white font-semibold rounded-full hover:bg-primary/90 transition-colors shadow-md"
+            >
+              Découvrir notre projet <ArrowRight className="w-4 h-4" />
+            </a>
+          </div>
+        </div>
+      </section>
+
       {/* ═══ CTA CONTACT ═══ */}
       <section className="py-20 bg-primary">
         <div className="max-w-3xl mx-auto px-4 text-center">
